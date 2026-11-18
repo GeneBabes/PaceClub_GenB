@@ -1,0 +1,71 @@
+{
+  "target": "C:\\Users\\Nasuri\\Projects\\PaceClub_GenB\\PaceClub_GenB\\paceclub-web",
+  "createdAt": "2026-11-18T15:28:52.755Z",
+  "files": [
+    {
+      "path": "app/page.tsx",
+      "existed": true,
+      "installedHash": "b313c2979c81a6bf4f980f0567bce41096624425b7dba4a379c9ecca79ca0dbd"
+    },
+    {
+      "path": "app/account-panel.tsx",
+      "existed": true,
+      "installedHash": "2073679c8b480742b5f644cb520c122390a5a4853e63ea909dbd301734d04b1d"
+    },
+    {
+      "path": "app/layout.tsx",
+      "existed": true,
+      "installedHash": "b9d1d57012bdbb0fb9b22395a3d516c712f1e3f4a5672e383737953de0119b6c"
+    },
+    {
+      "path": "app/globals.css",
+      "existed": true,
+      "installedHash": "0c2e0433ef076df4294d02c602acde836f0344730a337274bd23dc89b46b6914"
+    },
+    {
+      "path": "proxy.ts",
+      "existed": true,
+      "installedHash": "0091ed217d1bc0b5dc46a337ce7a5da0f9f07d61400bb21128c6962a2b9efe74"
+    },
+    {
+      "path": "lib/onboarding.ts",
+      "existed": false,
+      "installedHash": "98ebbbb98b83a00545ad5117b2e939ee84028490927523120449fedc8a204de4"
+    },
+    {
+      "path": "lib/account.ts",
+      "existed": false,
+      "installedHash": "056ed7060752212a595418514e210d6e8124c194ff545b09ecaa36ccc8e2db34"
+    },
+    {
+      "path": "app/onboarding/page.tsx",
+      "existed": false,
+      "installedHash": "6e5868c16c72c2b256396cd0748f41606606f4ec17a35a9c00d5584e10cd661a"
+    },
+    {
+      "path": "app/onboarding/wizard.tsx",
+      "existed": false,
+      "installedHash": "0289b3473edba2276978b84b44ab0bc35a8f819e8d89866a010c4e5e43e40772"
+    },
+    {
+      "path": "app/api/onboarding/route.ts",
+      "existed": false,
+      "installedHash": "8fc447fa0b8b1f0239311746806a74cf42f7aceac94a7eb50530f38e1907d2b0"
+    },
+    {
+      "path": "app/home/page.tsx",
+      "existed": false,
+      "installedHash": "b3c5ae1dceb4f43ef3ada2e28493e4e5cc495f090505d9b170502725d7a87500"
+    },
+    {
+      "path": "app/profile/page.tsx",
+      "existed": false,
+      "installedHash": "9ab425784ea7093b658c19011c9f4cb7983944deba8d2e420b16fcd9a08c7cf5"
+    },
+    {
+      "path": "tests/onboarding.test.cjs",
+      "existed": false,
+      "installedHash": "2ebb529d2e8261b3131f420807676109c9235c58c8bc771ba75d13565e89c806"
+    }
+  ]
+}

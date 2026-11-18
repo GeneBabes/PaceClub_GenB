@@ -1,13 +1,13 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { browserClient } from '@/lib/supabase/browser';
+import { getClan, type Profile } from '@/lib/onboarding';
 
-export type Profile = { id: string; display_name: string; avatar_path: string | null; clan_id: number | null; is_active: boolean };
-const clans: Record<number, string> = { 1: 'Virtus', 2: 'Sapientia', 3: 'Constantia', 4: 'Libertas' };
+export type { Profile } from '@/lib/onboarding';
 const extensions: Record<string, string> = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp' };
 
-export default function AccountPanel({ profile, signedIn, email, initialError }: {
-  profile: Profile | null; signedIn: boolean; email: string; initialError: string;
+export default function AccountPanel({ profile, signedIn, email, initialError, continueHref = null }: {
+  profile: Profile | null; signedIn: boolean; email: string; initialError: string; continueHref?: string | null;
 }) {
   const [supabase] = useState(browserClient);
   const [path, setPath] = useState(profile?.avatar_path ?? null);
@@ -78,7 +78,8 @@ export default function AccountPanel({ profile, signedIn, email, initialError }:
         {avatar ? <img className="avatar" src={avatar} alt={`${profile.display_name}'s profile picture`} /> : <div className="avatar placeholder">{profile.display_name.slice(0, 1).toUpperCase()}</div>}
         <h2>Hello, {profile.display_name}</h2>
         <p>{email}</p>
-        <p className="badge">{profile.clan_id ? clans[profile.clan_id] : 'Clan selection is coming next'}</p>
+        <p className="badge">{getClan(profile.clan_id)?.name ?? 'Your clan is waiting'}</p>
+        {continueHref && <a className="button-link" href={continueHref}>Find my clan <span aria-hidden="true">→</span></a>}
         {profile.is_active ? <label className="upload-label">Choose a profile picture
           <input type="file" accept="image/jpeg,image/png,image/webp" disabled={busy} onChange={(event) => {
             const file = event.currentTarget.files?.[0]; event.currentTarget.value = ''; if (file) void upload(file);

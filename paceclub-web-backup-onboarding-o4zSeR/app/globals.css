@@ -1,0 +1,20 @@
+* { box-sizing: border-box; }
+body { margin: 0; color: #193b32; background: #f3f1e9; font-family: Arial, Helvetica, sans-serif; }
+main { width: min(620px, 100%); padding: 60px 22px 32px; margin: auto; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 2px; }
+h1 { font-size: clamp(42px, 8vw, 66px); line-height: 1.04; margin: 26px 0 18px; letter-spacing: -2px; }
+.intro { font-size: 18px; color: #586b63; margin-bottom: 32px; }
+.card { border: 1px solid #d5dfd6; border-radius: 22px; background: white; padding: 28px; }
+h2 { font-size: 23px; margin: 0 0 12px; }
+p { line-height: 1.5; overflow-wrap: anywhere; }
+button { display: block; width: 100%; background: #245741; color: white; padding: 15px; border: 0; border-radius: 10px; margin-top: 14px; font: inherit; font-weight: 700; cursor: pointer; }
+button.secondary { background: #eff3ee; color: #244d3d; }
+button:disabled, input:disabled { opacity: .55; cursor: wait; }
+button:focus-visible, input:focus-visible { outline: 3px solid #dd7e31; outline-offset: 3px; }
+.avatar { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; }
+.placeholder { display: grid; place-items: center; background: #dce7d8; font-size: 34px; }
+.badge { display: inline-block; border-radius: 20px; background: #f4e8d4; padding: 6px 12px; font-size: 13px; }
+.upload-label { display: block; margin: 18px 0; font-size: 14px; }
+input { display: block; max-width: 100%; margin-top: 10px; }
+.message { padding: 12px; background: #f5f2e9; border-radius: 8px; font-size: 14px; }
+.footnote { text-align: center; font-size: 12px; color: #65756b; margin-top: 24px; }
