@@ -1,5 +1,5 @@
 # DONNA GRACE M. MAZON
-##BSIT-3C
+## BSIT-3C
 ## STRENGTHS
 - Data Visualization
 - Critical Thinking
