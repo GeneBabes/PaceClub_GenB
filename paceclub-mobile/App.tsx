@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
-import { AppState, Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
-import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import { Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
 import * as ImagePicker from 'expo-image-picker';
 import { File } from 'expo-file-system';
 import { randomUUID } from 'expo-crypto';
-import type { Session } from '@supabase/supabase-js';
+import { Link } from 'expo-router';
+import { useAuth } from './src/providers/AuthProvider';
+import { useRecorder } from './src/providers/RecorderProvider';
 import { supabase } from './lib/supabase';
 import { socialLogin } from './lib/oauth';
 
@@ -21,8 +23,8 @@ function Button({ label, action, disabled, secondary = false }: { label: string;
 }
 
 function AccountScreen() {
-  const [session, setSession] = useState<Session | null>(null);
-  const [ready, setReady] = useState(false);
+  const { session, ready } = useAuth();
+  const recorder = useRecorder();
   const [profileRecord, setProfile] = useState<Profile | null>(null);
   const [avatarRecord, setAvatar] = useState<{ path: string; url: string } | null>(null);
   const [busy, setBusy] = useState(false);
@@ -30,24 +32,6 @@ function AccountScreen() {
   const userId = session?.user.id;
   const profile = profileRecord?.id === userId ? profileRecord : null;
   const avatar = profile?.is_active && avatarRecord?.path === profile.avatar_path ? avatarRecord?.url : null;
-
-  useEffect(() => {
-    let live = true;
-    // Session drives the UI; Supabase validates API calls and enforces RLS.
-    const { data: listener } = supabase.auth.onAuthStateChange((_event, next) => {
-      if (live) { setSession(next); setReady(true); }
-    });
-    void supabase.auth.getSession().then(({ data, error }) => {
-      if (live) { setSession(data.session); setReady(true); if (error) setMessage(error.message); }
-    });
-    const refresh = (state: string) => {
-      if (state === 'active') supabase.auth.startAutoRefresh();
-      else supabase.auth.stopAutoRefresh();
-    };
-    refresh(AppState.currentState ?? 'active');
-    const stateListener = AppState.addEventListener('change', refresh);
-    return () => { live = false; listener.subscription.unsubscribe(); stateListener.remove(); supabase.auth.stopAutoRefresh(); };
-  }, []);
 
   useEffect(() => {
     let live = true;
@@ -83,7 +67,7 @@ function AccountScreen() {
   }
   async function logout() {
     setBusy(true); setMessage('');
-    try { const { error } = await supabase.auth.signOut(); if (error) throw error; }
+    try { await recorder.pause('Paused when you signed out.'); const { error } = await supabase.auth.signOut(); if (error) throw error; }
     catch (error) { setMessage(error instanceof Error ? error.message : 'Sign-out failed.'); }
     finally { setBusy(false); }
   }
@@ -126,9 +110,11 @@ function AccountScreen() {
             {avatar ? <Image source={{ uri: avatar }} style={styles.avatar} /> : <View style={[styles.avatar, styles.placeholder]}><Text style={styles.initial}>{profile.display_name.slice(0, 1).toUpperCase()}</Text></View>}
             <Text style={styles.heading}>Hello, {profile.display_name}</Text>
             <Text style={styles.text}>{session.user.email}</Text>
-            <Text style={styles.badge}>{profile.clan_id ? clans[profile.clan_id] : 'Clan selection is coming next'}</Text>
+            <Text style={styles.badge}>{profile.clan_id ? clans[profile.clan_id] : 'Choose your clan on the PaceClub website'}</Text>
+            
             {profile.is_active ? <Button label="Choose a profile picture" disabled={busy} action={() => void uploadAvatar()} /> : <Text style={styles.text}>Your account is inactive. Contact your project administrator.</Text>}
           </> : <Text style={styles.text}>Loading your profile…</Text>}
+          {(!profile || profile.is_active) && <View><Link href="/record" style={styles.link}>Record an activity →</Link><Link href="/activities" style={styles.link}>Saved activities & uploads</Link></View>}
           <Button label="Sign out" disabled={busy} secondary action={() => void logout()} />
         </>}
         {busy && <Text style={styles.text}>Please wait…</Text>}
@@ -138,9 +124,10 @@ function AccountScreen() {
     </ScrollView>
   </SafeAreaView>;
 }
-export default function App() { return <SafeAreaProvider><AccountScreen /></SafeAreaProvider>; }
+export default AccountScreen;
 
 const styles = StyleSheet.create({
+  link: { color: '#245741', fontWeight: '700', paddingVertical: 12, textDecorationLine: 'underline' },
   screen: { flex: 1, backgroundColor: '#f3f1e9' }, content: { padding: 24, paddingTop: 36, flexGrow: 1 },
   eyebrow: { color: '#193b32', fontSize: 11, letterSpacing: 2, fontWeight: '700' },
   title: { color: '#193b32', fontSize: 44, fontWeight: '700', lineHeight: 48, marginTop: 24 },

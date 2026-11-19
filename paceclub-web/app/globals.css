@@ -88,6 +88,32 @@ h1[tabindex]:focus { outline: none; }
 .empty-activities { text-align: center; padding: 36px; }
 .route-mark { font-size: 34px; color: #658464; margin-bottom: 12px; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.history-heading, .activity-row-top, .activity-row-bottom, .detail-title, .history-pagination { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.history-heading { margin: 26px 0 18px; }
+.history-heading h2 { margin: 0; }
+.refresh-link, .back-link { font-size: 14px; text-underline-offset: 4px; }
+.activity-row-top { margin-bottom: 22px; }
+.activity-row time { font-size: 12px; color: #586b63; }
+.activity-row h2 a { color: #193b32; text-decoration: none; }
+.activity-row h2 a:hover { text-decoration: underline; }
+.activity-stats { display: flex; gap: 44px; margin: 20px 0; flex-wrap: wrap; }
+.activity-stats strong { display: block; font-size: 30px; font-variant-numeric: tabular-nums; letter-spacing: -.7px; }
+.activity-stats span { display: block; color: #586b63; font-size: 13px; margin-top: 5px; }
+.activity-row-bottom { border-top: 1px solid #e5e9df; padding-top: 16px; }
+.activity-row-bottom .text-link { margin: 0; font-size: 14px; }
+.activity-status { font-size: 12px; white-space: nowrap; }
+.status-verified { background: #e0eedf; color: #245741; }
+.status-flagged, .status-rejected { background: #f7e2d8; color: #863b25; }
+.status-recording, .status-paused, .status-completed { background: #e9ede7; color: #586b63; }
+.history-pagination { margin: 28px 0; font-size: 14px; }
+.detail-title { margin: 30px 0; }
+.detail-title h1 { margin: 12px 0; }
+.detail-title p { margin-bottom: 0; }
+.detail-stats { gap: 26px; justify-content: space-between; }
+.detail-stats strong { font-size: 27px; }
+.activity-detail .card > .history-heading { margin-top: 0; }
+.route-trace { width: 100%; height: auto; display: block; }
+.route-caption { font-size: 12px; color: #586b63; line-height: 1.6; }
 @media (max-width: 520px) {
   .onboarding-page, .home-page { padding: 22px 16px; }
   .onboarding-card { padding: 22px 18px; }
@@ -102,4 +128,7 @@ h1[tabindex]:focus { outline: none; }
   .actions { gap: 8px; }
   .actions > button { padding: 14px 10px; font-size: 14px; }
   .app-header nav { gap: 16px; }
+  .app-header { flex-wrap: wrap; gap: 12px; }
+  .activity-stats { gap: 24px; }
+  .activity-row { padding: 22px; }
 }

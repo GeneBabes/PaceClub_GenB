@@ -33,6 +33,17 @@
           "cameraPermission": false,
           "microphonePermission": false
         }
+      ],
+      "expo-router",
+      "expo-sqlite",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Allow PaceClub to record your route while you use the activity recorder.",
+          "isIosBackgroundLocationEnabled": false,
+          "isAndroidBackgroundLocationEnabled": false,
+          "isAndroidForegroundServiceEnabled": false
+        }
       ]
     ],
     "extra": {
