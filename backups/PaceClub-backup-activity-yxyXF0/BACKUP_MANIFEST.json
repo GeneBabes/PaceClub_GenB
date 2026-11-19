@@ -1,0 +1,166 @@
+{
+  "target": "C:\\Users\\Nasuri\\Projects\\PaceClub_GenB\\PaceClub_GenB",
+  "createdAt": "2026-11-19T02:45:51.985Z",
+  "files": [
+    {
+      "path": "paceclub-mobile/App.tsx",
+      "existed": true,
+      "installedHash": "b7dcda7223951ea882e410868272129cd4a5923bebedab918f6003511c38ee40"
+    },
+    {
+      "path": "paceclub-mobile/lib/supabase.ts",
+      "existed": true,
+      "installedHash": "b0b73848d12923da935c4c4977baece917c8659c014a23be27506e9ad78f5502"
+    },
+    {
+      "path": "paceclub-mobile/src/app/activities.tsx",
+      "existed": false,
+      "installedHash": "489d16c622e393e2fa04a007b4147a72f9d2958d909571c30dec32a9f9f779a7"
+    },
+    {
+      "path": "paceclub-mobile/src/app/record.tsx",
+      "existed": false,
+      "installedHash": "40e04a4edae6dfb71c94dc0acb9856e12fa77a6dd81840c7761e454a47562cc5"
+    },
+    {
+      "path": "paceclub-mobile/src/app/_layout.tsx",
+      "existed": false,
+      "installedHash": "36fc7b5c6ddc605d792e3ca77fdcd9b60bc70613c046e962b43a107ff077bef1"
+    },
+    {
+      "path": "paceclub-mobile/src/app/index.tsx",
+      "existed": false,
+      "installedHash": "a8890293f54756b72caefb23f8f4146415c8d2dc8b35f7869a2321c554572441"
+    },
+    {
+      "path": "paceclub-mobile/src/app/activity/[id].tsx",
+      "existed": false,
+      "installedHash": "7368a1e649394ea8f1ecb51071af1c0fa40ba11e948f43dc1685003b93be8e40"
+    },
+    {
+      "path": "paceclub-mobile/src/app/auth/callback.tsx",
+      "existed": false,
+      "installedHash": "e2be8c0ff140fb29bd40b31d8b82c2575b0ea060bfa7bff8cb4e30c646d1bb60"
+    },
+    {
+      "path": "paceclub-mobile/src/activity/model.ts",
+      "existed": false,
+      "installedHash": "62d4d58eb8122b6789f483fe494aea959a59615245f1fa84f45d8df4642e1db0"
+    },
+    {
+      "path": "paceclub-mobile/src/activity/route.ts",
+      "existed": false,
+      "installedHash": "e943e637c32475c3af789b026f1def7395dc76e4cb48185329daa85a53fc20a5"
+    },
+    {
+      "path": "paceclub-mobile/src/activity/sync.ts",
+      "existed": false,
+      "installedHash": "97b7fda1cb3298ea6c73d2a001b1652f07cd04cd334ab249a9186eb2268ad1c6"
+    },
+    {
+      "path": "paceclub-mobile/src/activity/store.ts",
+      "existed": false,
+      "installedHash": "9b204cd8405876744e72f3e02d762709bb1df1a8dbb2de1cd94036e68d770eeb"
+    },
+    {
+      "path": "paceclub-mobile/src/components/ActivityUI.tsx",
+      "existed": false,
+      "installedHash": "bd4912a933e51e6713797a228c2e502535923fd20d4dd4d06d6e10e5b74bfa9f"
+    },
+    {
+      "path": "paceclub-mobile/src/providers/RecorderProvider.tsx",
+      "existed": false,
+      "installedHash": "1af2a7ff5a97c6c877ff7b48e646c86d72b60b8d739cfc7ca05ad8d4271804c8"
+    },
+    {
+      "path": "paceclub-mobile/src/providers/AuthProvider.tsx",
+      "existed": false,
+      "installedHash": "84d5a41b6967fb14f5aac8a29e7004ac576daffb4e1c1863395f1860e7f65033"
+    },
+    {
+      "path": "paceclub-mobile/tests/upload.test.cjs",
+      "existed": false,
+      "installedHash": "43072aadcaef4dfb1acdca813d1790d0e7056d939b86f2f5d91b63df5b124d94"
+    },
+    {
+      "path": "paceclub-mobile/tests/storage.test.cjs",
+      "existed": false,
+      "installedHash": "733729c64b97b86e912f1ce87662c6734c9476decbd0a2b39056c3042319283a"
+    },
+    {
+      "path": "paceclub-mobile/tests/recorder.test.cjs",
+      "existed": false,
+      "installedHash": "d7082bafd6b17e9706630dbd7cb1cd0246010a8c58136bbf6f54fdcc55d17b6a"
+    },
+    {
+      "path": "paceclub-mobile/tests/register.cjs",
+      "existed": false,
+      "installedHash": "139793ae69fe21e17f9ff807d15b8dadfab9c0d2abec0a97c4eb3c9331c24a8d"
+    },
+    {
+      "path": "paceclub-web/proxy.ts",
+      "existed": true,
+      "installedHash": "0ba8fdb3ae1f50d8cd4ae872fd6cd05310e18273fb9779aa0c43d4b19dab523e"
+    },
+    {
+      "path": "paceclub-web/lib/route-geometry.ts",
+      "existed": false,
+      "installedHash": "cf7cda9ab83fce686ba01b3812522730d2fb6948b0b01fe537f55044cfba83a1"
+    },
+    {
+      "path": "paceclub-web/lib/activities.ts",
+      "existed": false,
+      "installedHash": "25c4d9ba9d7d2f93a3448034ff614a68d393e702d4bb137867a07fb3d5ffffa9"
+    },
+    {
+      "path": "paceclub-web/app/globals.css",
+      "existed": true,
+      "installedHash": "040491e28f418766fe23bc543ab57b8ad18744cf4081632d45656a2058af93e7"
+    },
+    {
+      "path": "paceclub-web/app/home/page.tsx",
+      "existed": true,
+      "installedHash": "597c5416d670bcb34dbb4ec4c325c7c6a58b304ac103ec925ae90f9830f09e37"
+    },
+    {
+      "path": "paceclub-web/app/activities/page.tsx",
+      "existed": false,
+      "installedHash": "9d126c378142d5b7300755838940deb5bf2a683e3a181a08a8acd595d6f94d33"
+    },
+    {
+      "path": "paceclub-web/app/activities/activity-header.tsx",
+      "existed": false,
+      "installedHash": "cdfb17c41020c42a4753f3e3e6974c6d68a7bb6a52d029b761065bad5421693b"
+    },
+    {
+      "path": "paceclub-web/app/activities/[id]/page.tsx",
+      "existed": false,
+      "installedHash": "b41b8c6260b7d3fbaca5fd7d67eb4bd729f705a80e6543139fb07b5b0242bde5"
+    },
+    {
+      "path": "paceclub-web/app/activities/[id]/not-found.tsx",
+      "existed": false,
+      "installedHash": "340f46eec4369856404d4d5e34fd270c4482a6f356eab50c970f0ea4805d9e82"
+    },
+    {
+      "path": "paceclub-web/app/profile/page.tsx",
+      "existed": true,
+      "installedHash": "f72cda8cdb6d1ac3de85df7aedb711ae0c3ec5145e68baa1a24614e13ee06739"
+    },
+    {
+      "path": "paceclub-web/tests/activities.test.cjs",
+      "existed": false,
+      "installedHash": "ebb2d2d1606d1a4df91622c35c04af2ad47b2305add00ad38aa52043fe881977"
+    },
+    {
+      "path": "paceclub-mobile/package.json",
+      "existed": true,
+      "installedHash": "dd9b279c350cba10e6573a04619d1c7a937395c87e2bcd035b29b6c36240f925"
+    },
+    {
+      "path": "paceclub-mobile/app.json",
+      "existed": true,
+      "installedHash": "b2659857727841a8ba6cc71a338cd02dba408958376aaf47ef190e684ae1996c"
+    }
+  ]
+}

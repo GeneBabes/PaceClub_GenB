@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "PaceClub",
+    "slug": "paceclub-mobile",
+    "scheme": "paceclub",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "bundleIdentifier": "com.paceclub.student",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.paceclub.student",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-web-browser",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Choose a picture for your PaceClub profile.",
+          "cameraPermission": false,
+          "microphonePermission": false
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "4dde5318-ee80-402d-b6ae-1474622fb9d9"
+      }
+    },
+    "owner": "nasuriii"
+  }
+}
