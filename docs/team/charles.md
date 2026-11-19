@@ -1,0 +1,1 @@
+My name is Charles Dwayne Tejano, my strengths are Leadership Skills, Analytical Thinking, one thing to learn for me is on how to become an effective leader through my team's efforts. By that, I believe I'll grow as a person; professionally and personally speaking.
