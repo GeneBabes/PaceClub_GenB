@@ -2,7 +2,7 @@
   "name": "paceclub-web",
   "version": "0.1.0",
   "private": true,
-  "scripts": {"dev": "next dev", "build": "next build", "start": "next start", "typecheck": "tsc --noEmit"},
+  "scripts": {"dev": "next dev", "build": "next build", "start": "next start", "typecheck": "tsc --noEmit", "test": "node --test tests/*.test.cjs"},
   "dependencies": {"@supabase/ssr": "0.12.7", "@supabase/supabase-js": "latest", "next": "16.4.6", "react": "latest", "react-dom": "latest"},
   "devDependencies": {"@types/node": "^24", "@types/react": "^19", "@types/react-dom": "^19", "typescript": "^5"}
 }

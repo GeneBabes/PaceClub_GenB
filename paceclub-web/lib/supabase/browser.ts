@@ -1,5 +1,5 @@
-import { createBrowserClient } from '@supabase/ssr';
-import { connection } from './config';
+import { createBrowserClient } from "@supabase/ssr";
+import { connection } from "./config";
 
 export function browserClient() {
   const { url, key } = connection();

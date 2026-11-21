@@ -1,0 +1,28 @@
+name: PaceClub checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: |
+            paceclub-web/package-lock.json
+            paceclub-mobile/package-lock.json
+            implementation/package-lock.json
+      - run: npm run setup
+      - run: npm run check
+      - run: npm test
+      - run: npm run build:web
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: https://example.supabase.co
+          NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: ci-public-placeholder
+      - run: npm --prefix paceclub-mobile run export:android
+        env:
+          EXPO_PUBLIC_SUPABASE_URL: https://example.supabase.co
+          EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY: ci-public-placeholder
