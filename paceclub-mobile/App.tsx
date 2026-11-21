@@ -9,6 +9,7 @@ import { Link } from 'expo-router';
 import { useAuth } from './src/providers/AuthProvider';
 import { useRecorder } from './src/providers/RecorderProvider';
 import { supabase } from './lib/supabase';
+import { disablePush } from './src/full/push';
 import { socialLogin } from './lib/oauth';
 
 type Profile = { id: string; display_name: string; avatar_path: string | null; clan_id: number | null; is_active: boolean };
@@ -67,7 +68,7 @@ function AccountScreen() {
   }
   async function logout() {
     setBusy(true); setMessage('');
-    try { await recorder.pause('Paused when you signed out.'); const { error } = await supabase.auth.signOut(); if (error) throw error; }
+    try { await recorder.pause('Paused when you signed out.'); if(userId) await disablePush(userId); const { error } = await supabase.auth.signOut(); if (error) throw error; }
     catch (error) { setMessage(error instanceof Error ? error.message : 'Sign-out failed.'); }
     finally { setBusy(false); }
   }

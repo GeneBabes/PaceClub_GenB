@@ -1,0 +1,18 @@
+{
+  "name": "paceclub-app-and-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PaceClub full application source: web, mobile, verified activities, community and play",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "setup": "npm --prefix paceclub-web ci && npm --prefix paceclub-mobile ci && npm --prefix implementation ci",
+    "web": "npm --prefix paceclub-web run dev",
+    "mobile": "npm --prefix paceclub-mobile run start",
+    "check": "npm --prefix paceclub-web run typecheck && npm --prefix paceclub-mobile run typecheck && npm --prefix paceclub-mobile run lint",
+    "test": "npm --prefix paceclub-web test && npm --prefix paceclub-mobile test && npm --prefix implementation test && npm --prefix backend test",
+    "build:web": "npm --prefix paceclub-web run build",
+    "worker": "npm --prefix backend start"
+  }
+}

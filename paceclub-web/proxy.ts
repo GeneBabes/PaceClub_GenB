@@ -22,4 +22,4 @@ export async function proxy(request: NextRequest) {
   return response;
 }
 
-export const config = { matcher: ['/', '/auth/callback', '/onboarding', '/home', '/profile', '/api/onboarding', '/activities/:path*'] };
+export const config = { matcher: ['/', '/auth/callback', '/onboarding', '/home', '/profile', '/api/onboarding', '/activities/:path*', '/play', '/clubs', '/community', '/chat', '/analytics', '/rewards', '/notifications', '/territory', '/moderation', '/import', '/practice'] };

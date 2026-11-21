@@ -30,7 +30,7 @@
         "expo-image-picker",
         {
           "photosPermission": "Choose a picture for your PaceClub profile.",
-          "cameraPermission": false,
+          "cameraPermission": "Take a photo to share with your PaceClub activity.",
           "microphonePermission": false
         }
       ],
@@ -43,6 +43,13 @@
           "isIosBackgroundLocationEnabled": false,
           "isAndroidBackgroundLocationEnabled": false,
           "isAndroidForegroundServiceEnabled": false
+        }
+      ],
+      "expo-notifications",
+      [
+        "expo-sensors",
+        {
+          "motionPermission": "Use motion signals during recording for optional check-ins and device quality summaries."
         }
       ]
     ],
